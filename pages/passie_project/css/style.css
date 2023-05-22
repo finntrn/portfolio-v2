@@ -1,0 +1,337 @@
+html:root {
+    --color1: #F9F5EB;
+    --color2: #E4DCCF;
+    --color3: #EA5455;
+    --color4: #002B5B;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: var(--color1); */
+}
+
+body {
+    background-image: url(../images/background_img_2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    height: 200px;
+}
+
+p {
+    display: none;
+    position: absolute;
+    left: 2em;
+    top: 1em;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ea545467;
+    color: var(--color2);
+    border-radius: 15px;
+    font-size: 15px;
+    animation: fade-in 500ms ease-in;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-top: 1em; */
+}
+
+.monsters {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#monster-1 {
+    height: 250px;
+    display: none;
+    animation: monster-animation 250ms;
+    opacity: 0.5;
+}
+
+#monster-2 {
+    position: relative;
+    top: 9em;
+    height: 100px;
+    display: none;
+    animation: monster-animation 250ms;
+    opacity: 0.5;
+}
+
+#monster-3 {
+    height: 250px;
+    display: none;
+    animation: monster-animation 250ms;
+    opacity: 0.5;
+}
+
+#monster-4 {
+    position: relative;
+    top: 8em;
+    height: 125px;
+    display: none;
+    opacity: 0.5;
+    animation: monster-animation 250ms;
+
+}
+
+#monster-5 {
+    height: 250px;
+    display: none;
+    animation: monster-animation 250ms;
+    opacity: 0.5;
+}
+
+#monster-6 {
+    position: relative;
+    height: 150px;
+    top: 6em;
+    display: none;
+    animation: monster-animation 250ms;
+    opacity: 0.5;
+}
+
+#monster-7 {
+    position: relative;
+    top: 9em;
+    height: 100px;
+    display: none;
+    animation: monster-animation 250ms;
+    opacity: 0.5;
+}
+
+@keyframes monster-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%);
+}
+
+footer h2 {
+    text-align: center;
+    color: var(--color1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2em;
+}
+
+#inst-1 {
+    background-image: url(../images/gitaar_snare.png);
+}
+
+#inst-2 {
+    background-image: url(../images/egel_gitaar.png);
+    background-size: 80%;
+    background-position: 50% 0;
+}
+
+#inst-3 {
+    background-image: url(../images/paddestoel_bass.png);
+    background-size: 80%;
+    background-position: 50% 10%;
+}
+
+#inst-4 {
+    background-image: url(../images/kat_piano.png);
+    background-size: 80%;
+    background-position: 50% 10%;
+}
+
+#inst-5 {
+    background-image: url(../images/trompet_olifant.png);
+    background-size: 80%;
+    background-position: 50% 10%;
+}
+
+#inst-6 {
+    background-image: url(../images/synth_vogel.png);
+    background-size: 80%;
+    background-position: 50% 10%;
+}
+
+#inst-7 {
+    background-image: url(../images/blauwe_egel.png);
+    background-size: 80%;
+    background-position: 50% 0;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    color: var(--color3);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #4cb588;
+    border: 2px solid var(--color4);
+    border-radius: 15px;
+    height: 200px;
+    aspect-ratio: 2 / 3;
+}
+
+.button:hover {
+    cursor: pointer;
+    transition: 400ms;
+    transform: translateY(-30px);
+}
+
+.button:not(:hover) {
+    transition: 200ms;
+}
+
+.button:active {
+    transform: translateY(-20px);
+    transition: 200ms;
+}
+
+.bars {
+    margin-bottom: 3em;
+    display: flex;
+    gap: 50px;
+}
+
+.bar-outside {
+    background: var(--color2);
+    height: 10px;
+    width: 120px;
+    border-radius: 10px;
+    display: none;
+}
+
+.bar-inside {
+    position: relative;
+    top: -50%;
+    /* transform: translate(0, 50%); */
+    background: var(--color3);
+    height: 20px;
+    width: 20px;
+    transition: 150ms;
+    border-radius: 10px;
+    left: 0;
+}
+
+.audio-controls {
+    display: flex;
+    gap: 130px;
+}
+
+#control1 {
+    display: none;
+}
+
+#control2 {
+    display: none;
+}
+
+#control3 {
+    display: none;
+}
+
+#control4 {
+    display: none;
+}
+
+#control5 {
+    display: none;
+}
+
+#control6 {
+    display: none;
+}
+
+#control7 {
+    display: none;
+}
+
+.control-button,
+#reset {
+    background-color: transparent;
+    border: 3px solid var(--color1);
+    color: var(--color1);
+    padding: 7px 10px 7px 10px;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.control-button:hover,
+#reset:hover {
+    background-color: rgba(255, 0, 0, 0.415);
+    transform: translateY(-3px)
+}
+
+#reset {
+    position: absolute;
+    left: 90%;
+    top: 90%;
+}
+
+#back-btn {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    z-index: 10;
+    margin: 1.5em;
+    color: rgb(255, 253, 225);
+    background-color: rgba(0, 0, 0, 0.515);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding:10px 20px 10px 10px;
+    transition: 200ms;
+}
+
+#back-btn:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: rgb(255, 253, 225);
+    color: black;
+}
+
+#back-btn:active {
+    transform: translateY(-2px);
+}
