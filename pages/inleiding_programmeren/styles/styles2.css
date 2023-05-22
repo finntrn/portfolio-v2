@@ -1,0 +1,389 @@
+@font-face {
+    font-family: 'DCC-Ash';
+    src: url(../fonts/DCC-Ash.otf);
+}
+
+@font-face {
+    font-family: 'Mother Danger';
+    src: url(../fonts/Another\ Danger\ -\ Demo.otf);
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    margin: 0;
+}
+
+.game_field {
+    position: relative;
+    transition: all 100ms;
+}
+
+.background {
+    position: absolute;
+    height: 550px;
+    image-rendering: pixelated;
+}
+
+.water_background {
+    position: absolute;
+    height: 150px;
+    top: 27em;
+    image-rendering: pixelated;
+    z-index: 10;
+
+}
+
+.door {
+    position: absolute;
+    height: 204px;
+    image-rendering: pixelated;
+    top: 8.37em;
+    left: 464.4em;
+}
+
+.trap {
+    position: absolute;
+    top: 14.5em;
+    left: 130em;
+}
+
+.trap2 {
+    position: absolute;
+    top: 14.5em;
+    left: 234em;
+}
+
+.trap_sprite {
+    height: 200px;
+    image-rendering: pixelated;
+}
+
+.enemy_healthbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 15px;
+    width: 200px;
+    background-image: linear-gradient(90deg, rgb(112, 112, 112) 0%,rgb(69, 69, 69) 100%);
+    padding: 2px;
+}
+
+.enemy_health, .enemy_health2 {
+    background-image: linear-gradient(90deg, rgb(155, 0, 0) 0%, rgba(175,0,0,1) 100%);
+    height: 100%;
+    width: 100%;
+    transition: 200ms linear;
+}
+
+.enemy_hurt {
+    animation-name: enemy_hurt;
+    animation-timing-function: linear;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes enemy_hurt {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(35px, -30px)
+    }
+
+    40% {transform: translate(70px, 0)}
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+.rat_hurt {
+    animation-name: rat_hurt;
+    animation-timing-function: linear;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes rat_hurt {
+    0% {
+        transform: translateY(0);
+    }
+
+
+    40% {transform: translateY(-50px)}
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.rat_idle {
+    position: absolute;
+    left: 46%;
+    top: 51%;
+    height: 100px;
+    image-rendering: pixelated;
+    z-index: 5;
+}
+
+.rat_jump {
+    animation-name: rat_jump;
+    animation-timing-function: linear;
+    animation-duration: 1200ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes rat_jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-95px)
+    }
+
+    30% {
+        transform: translateY(-105px);
+    }
+
+    40% {
+        transform: translateY(-110px);
+    }
+
+    65% {
+        transform: translateY(0px);
+    }
+}
+
+.rat_fall {
+    animation-name: rat_fall;
+    animation-timing-function: linear;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes rat_fall {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(500px);
+    }
+
+    100% {
+        transform: translateY(500px);
+    }
+}
+
+.rat_enter {
+    animation-name: rat_enter;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+}
+
+@keyframes rat_enter {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.rat_attack {
+    animation-name: rat_attack;
+    animation-timing-function: linear;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes rat_attack {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.cockroach {
+    position: absolute;
+    top: 16em;
+    left: 184em;
+    height: 120px;
+    image-rendering: pixelated;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1448px;
+    height: 100%;
+    box-shadow: 0 0 150px 180px black inset;
+    z-index: 20;
+}
+
+h1 {
+    position: relative;
+    z-index: 30;
+    color: red;
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Mother Danger', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    letter-spacing: 6px;
+}
+
+h2 {
+    position: relative;
+    z-index: 30;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'DCC-Ash', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    letter-spacing: 3px;
+}
+
+.button_feedback {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 20em 20em;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    top: 38em;
+    left: 27.5%;
+}
+
+.spacebar_butt {
+    position: relative;
+    height: 40px;
+    image-rendering: pixelated;
+    z-index: 40;
+}
+
+h3 {
+    position: relative;
+    z-index: 40;
+    color: white;
+    text-align: center;
+    font-family: 'DCC-Ash', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    letter-spacing: 3px;
+    font-size: 35px;
+}
+
+.buttons {
+    position: relative;
+    display: grid;
+	grid-template-columns: 40px 40px 40px;
+    align-items: center;
+    justify-items: center;
+    column-gap: 15px;
+    row-gap: 10px;
+    z-index: 40;
+}
+
+.buttons img:first-of-type{
+    grid-column: span 3;
+}
+
+.buttons img {
+    image-rendering: pixelated;
+    height: 40px;
+}
+
+.healthbar {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 35em;
+    left: 10em;
+    background-image: conic-gradient(rgb(169, 0, 0) 100%,#ffffff00 0%);
+    padding: 2px;
+    z-index: 40;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.health {
+    margin-top: 1.2em;
+    font-size: 20px;
+}
+
+.rat_icon {
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid rgb(1, 21, 15);
+    margin-top: 4em;
+}
+
+p {
+    color: white;
+    z-index: 40;
+    margin-top: -10em;
+    margin-left: 100%;
+}
+
+.audio_butt {
+    position: absolute;
+    margin: 1em;
+    height: 50px;
+    z-index: 40;
+}
+
+#back-btn {
+    position: absolute;
+    color: white;
+    z-index: 30;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding:10px 20px 10px 10px;
+    font-size: 25px;
+    top: 3em;
+    left: .5em;
+    transition: 200ms;
+}
+
+#back-btn:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: rgb(255, 253, 225);
+    color: black;
+}
+
+#back-btn:active {
+    transform: translateY(-2px);
+}

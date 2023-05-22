@@ -1,0 +1,351 @@
+/* * {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+} */
+
+.no-scrlbar {
+    height: 300vh;
+}
+
+.no-scrlbar::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    background-color: rgb(255, 253, 225);
+    margin: 0;
+}
+
+/* INDEX PAGE */
+
+.index-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    max-width: 100px;
+    margin-left: -1.2em;
+}
+
+h1+h2 {
+    margin-left: 1.2em;
+}
+
+.scroll-h2 {
+    position: absolute;
+    left: -5em;
+    top: 70%;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    transform: rotate(90deg);
+}
+
+.line-div {
+    display: flex;
+    gap: 8px;
+}
+
+.lines-right {
+    width: 400px;
+    height: 600px;
+    background: repeating-linear-gradient(90deg,
+            black,
+            black 8px,
+            transparent 8px,
+            transparent 16px);
+}
+
+.lines-left {
+    width: 400px;
+    height: 600px;
+    background: repeating-linear-gradient(270deg,
+            black,
+            black 8px,
+            transparent 8px,
+            transparent 16px);
+    /* transition: 200ms linear; */
+}
+
+.ball {
+    position: absolute;
+    height: 500px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: rgb(255, 253, 225);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-animation {
+    animation: hide-index 1.5s;
+}
+
+@keyframes hide-index {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(2000px);
+    }
+}
+
+
+
+/* PAGE TWO */
+
+.page-two-container {
+    position: fixed;
+    display: none;
+    opacity: 1;
+    animation: page-two-animation 1s;
+}
+
+.page-two-container-2 {
+    position: fixed;
+    display: block;
+    opacity: 1;
+    animation: page-two-animation 1s;
+}
+
+.lines-two {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: repeating-linear-gradient(transparent,
+            transparent 47px,
+            black 47px,
+            black 50px);
+    /* transform: translateY(1000px); */
+}
+
+@keyframes page-two-animation {
+    from {
+        transform: translateY(-1000px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+.word-grid {
+    position: fixed;
+    left: 10em;
+    height: 100%;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(16, 47px);
+    grid-column-gap: 0px;
+    grid-row-gap: 3px;
+    margin: 0;
+}
+
+.page-links {
+    display: flex;
+    text-decoration: none;
+    justify-self: center;
+    align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    letter-spacing: 5px;
+    transition: 200ms;
+    line-height: 15px;
+    margin: 0;
+    padding:10px 20px 10px 10px;
+    /* font-weight: bold; */
+}
+
+.page-links:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    user-select: none;
+    background-color: black;
+    color: rgb(255, 253, 225);
+}
+
+.page-links:active {
+    transform: translateY(-2px);
+}
+
+/* pages general */
+
+#back-btn {
+    position: fixed;
+    z-index: 10;
+    margin: 1.5em;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding:10px 20px 10px 10px;
+    transition: 200ms;
+}
+
+#back-btn:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: black;
+    color: rgb(255, 253, 225);
+}
+
+#back-btn:active {
+    transform: translateY(-2px);
+}
+
+#back-btn-grd {
+    position: fixed;
+    z-index: 10;
+    margin: 2.6em;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    padding:10px 20px 10px 10px;
+    transition: 200ms;
+}
+
+#back-btn-grd:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: black;
+    color: rgb(255, 253, 225);
+}
+
+#back-btn-grd:active {
+    transform: translateY(-2px);
+}
+
+
+#pages-sect {
+    margin-top: 4em;
+    display: flex;
+    gap: 35px;
+}
+
+#pages-sect h2 {
+    margin: 0;
+}
+
+/* vormgeving page */
+
+#vormgeving-body {
+    height: 180vh;
+}
+
+.vormgeving-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-three-h2 {
+    font-size: 50px;
+    margin: 0;
+    margin-top: 2em;
+}
+
+.page-three-p {
+    font-size: 20px;
+    margin: 0;
+}
+
+#vormgeving-img {
+    height: 1000px;
+}
+
+#pages-sect p {
+    max-width: 400px;
+}
+
+/* inleiding programmeren page */
+
+#ip-body {
+    height: 100vh;
+}
+
+#ip-img {
+    height: 400px;
+}
+
+.play-btn {
+    margin-top: 1em;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    align-self: center;
+    transition: 200ms;
+    padding:10px 20px 10px 10px;
+    border: 1px solid black;
+}
+
+.play-btn:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: black;
+    color: rgb(255, 253, 225);
+}
+
+.play-btn:active {
+    transform: translateY(-2px);
+}
+
+.ip-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ip-div p {
+    margin-top: 0;
+}
+
+/* heel holland kookt */
+
+.hhk-img {
+    height: 300px;
+    margin: .5em
+}
+
+.hhk-div {
+    max-width: 500px;
+}
+
+/* content */
+
+.content-img {
+    width: 240px;
+}
+
+.content-div {
+    display: grid;
+    grid-template-columns: repeat(2, 240px);
+    grid-template-rows: repeat(2, 345px);
+    grid-column-gap: .5em;
+    grid-row-gap: .5em;
+    }
+    
+    /* .content-img-1 { grid-area: 1 / 1 / 2 / 2; }
+    .content-img-2 { grid-area: 1 / 2 / 2 / 3; }
+    .content-img-3 { grid-area: 2 / 1 / 3 / 2; }
+    .content-img-4 { grid-area: 2 / 2 / 3 / 3; }
+    .content-img-5 { grid-area: 3 / 1 / 4 / 2; } */
