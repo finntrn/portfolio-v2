@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="jouw naam">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Home - Viper | Sparkling water with a bite</title>
+
+	<link href="styles/style_shop.css" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<script defer src="scripts/script_shop.js"></script>
+</head>
+
+<body>
+	<header>
+		<a href="../frontenddevelopment.html" id="back-btn">&#8592; terug</a>
+		<p>VANDAAG VOOR 22:00 BESTELD IS MORGEN IN HUIS.
+			GRATIS BEZORGING VANAF EUR 60,00!</p>
+
+		<section class="header-section">
+			<a href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 320 512" fill="currentColor"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></a>
+			<img src="./assets/images/shop_page/logo.png" alt="Het Grolsch logo.">
+		</section>
+	</header>
+
+	<main>
+		<h1>VIPER</h1>
+		<section class="sort-section">
+			<!-- <label for="orde-type">Sorteer op</label> -->
+			<select name="orde-type" id="orde-type">
+				<option value="positie">Positie</option>
+				<option value="productnaam">Productnaam</option>
+				<option value="prijs">Prijs</option>
+				<option value="merk">Merk</option>
+				<option value="giftcard-position">Giftcard Position</option>
+			</select>
+
+			<label for="show-aantal">Toon</label>
+			<select name="show-aantal" id="show-aantal">
+				<option value="16">16</option>
+				<option value="32">32</option>
+				<option value="48">48</option>
+				<option value="alle">Alle</option>
+			</select>
+		</section>
+
+		<!-- SHOP SECTION -->
+
+		<section class="shop-section">
+			<ul>
+				<li>
+					<label for="prijs-filter">Prijs:</label>
+					<select name="prijs-filter" id="prijs-filter">
+						<option value="19,99">€19,99 - €20,00</option>
+					</select>
+				</li>
+				<li>
+					<label for="hoeveelheid">Hoeveelheid:</label>
+					<select name="hoeveelheid" id="hoeveelheid">
+						<option value="12_33cl">12* 33cl</option>
+					</select>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<img src="./assets/images/shop_page/items/watermelon.png"
+						alt="Een plaatje van een 12-pack watermeloen viper.">
+					<h3>€ 19,99</h3>
+					<h4>VIPER HARD SELTZER WATERMELON BLIK 12*33CL</h4>
+					<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"
+							fill="currentColor">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path
+								d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+							</svg></button>
+				</li>
+				<li>
+					<img src="./assets/images/shop_page/items/tropical.png"
+						alt="Een plaatje van een 12-pack tropical viper.">
+					<h3>€ 19,99</h3>
+					<h4>VIPER HARD SELTZER TROPICAL BLIK 12*33CL</h4>
+					<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"
+							fill="currentColor">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path
+								d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+							</svg></button>
+				</li>
+				<li>
+					<img src="./assets/images/shop_page/items/peach.png" alt="Een plaatje van een 12-pack peach viper.">
+					<h3>€ 19,99</h3>
+					<h4>VIPER HARD SELTZER PEACH BLIK 12*33CL</h4>
+					<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"
+							fill="currentColor">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path
+								d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+							</svg></button>
+				</li>
+				<li>
+					<img src="./assets/images/shop_page/items/lime.png"
+						alt="Een plaatje van een 12-pack cranberry viper.">
+					<h3>€ 19,99</h3>
+					<h4>VIPER HARD SELTZER LIME BLIK 12*33CL</h4>
+					<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"
+							fill="currentColor">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path
+								d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+							</svg></button>
+				</li>
+				<li>
+					<img src="./assets/images/shop_page/items/cranberry.png"
+						alt="Een plaatje van een 12-pack lime viper.">
+					<h3>€ 19,99</h3>
+					<h4>VIPER HARD SELTZER CRANBERRY BLIK 12*33CL</h4>
+					<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"
+							fill="currentColor">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path
+								d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z" />
+							</svg></button>
+				</li>
+
+			</ul>
+		</section>
+		<section class="info-section">
+			<p>Viper Hard Seltzer is een heldere, licht alcoholische drank,
+				gemaakt van natuurlijke ingrediënten. Het bestaat uit
+				bruiswater, alcohol en een fruitsmaak en richt zich vooral
+				op degenen die graag genieten van een alcoholisch drankje
+				maar ook voorzichtig zijn met het consumeren van kunstmatige
+				ingrediënten, suiker of veel calorieën.
+				<br><br>
+				Viper is een gebrouwen hard seltzer, beschikbaar in 5
+				verschillende smaken lime, cranberry, peach, Tropical en
+				watermelon en bevat geen conserveringsmiddelen en kunstmatige
+				kleur- en zoetstoffen.</p>
+		</section>
+	</main>
+
+	<footer>
+		<section class="footer-section-1">
+			<img src="./assets/images/shop_page/emblem.svg" alt=''>
+			<h2>VOLG ONS OP</h2>
+			<ul>
+				<li><a><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="currentColor">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path
+								d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+							</svg></a></li>
+				<li><a><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="currentColor">
+							<!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+							<path
+								d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+							</svg></a></li>
+			</ul>
+		</section>
+		<section class="footer-section-2">
+			<ul>
+				<li>
+					<ul>
+						<li>
+							<h4>KLANTENSERVICE</h4>
+						</li>
+						<li><a href='#'>Veelgestelde vragen</a></li>
+						<li><a href='#'>Contact webshop</a></li>
+						<li><a href='#'>Algemene voorwaarden</a></li>
+						<li><a href='#'>Verzenden & retourneren</a></li>
+						<li><a href='#'>Mijn account</a></li>
+						<li><a href='#'>Mijn bestellingen</a></li>
+						<li><a href='#'>Relatiegeschenken</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li>
+							<h4>INFORMATIE</h4>
+						</li>
+						<li><a href='#'>Over Alcohol</a></li>
+						<li><a href='#'>Disclaimer</a></li>
+						<li><a href='#'>Privacy en cookie statement</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li>
+							<h4>GROLSCH BROUWERIJ</h4>
+						</li>
+						<li>
+							<p>Grolsch Brouwerij Shop in Enschede is
+								geopend op woe/do/vrij van 9:00-12:00 en
+								13:00-17:00 uur <br>
+								Telefoonnummer 053 - 483 32 90</p>
+						</li>
+						<li>
+							<h4>CONTACT WEBSHOP</h4>
+						</li>
+						<li>
+							<p>T: 030 - 227 10 61
+								(op werkdagen van 9:00-17:00 uur)</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+
+
+			<p>©Copyright Consumer NL - 2020</p>
+
+		</section>
+		<section class="alcohol-info-section">
+			<h4>Met trots voor u gebrouwen. Geen 18, geen alcohol.</h4>
+			<a href="#">Over Alcohol</a>
+		</section>
+
+
+
+
+		<section class="fixed-footer">
+			<ul>
+				<li>
+					<a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></a>
+				</li>
+				<li>
+					<button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></button>
+				</li>
+				<li>
+					<a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></a>
+				</li>
+				<li>
+					<a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg></a>
+				</li>
+				<li>
+					<span>0</span>
+					<a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M253.3 35.1c6.1-11.8 1.5-26.3-10.2-32.4s-26.3-1.5-32.4 10.2L117.6 192H32c-17.7 0-32 14.3-32 32s14.3 32 32 32L83.9 463.5C91 492 116.6 512 146 512H430c29.4 0 55-20 62.1-48.5L544 256c17.7 0 32-14.3 32-32s-14.3-32-32-32H458.4L365.3 12.9C359.2 1.2 344.7-3.4 332.9 2.7s-16.3 20.6-10.2 32.4L404.3 192H171.7L253.3 35.1zM192 304v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16zm96-16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16zm128 16v96c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg></a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="footer-menu">
+			<ul>
+				<li>
+					<h3>MENU</h3>
+				</li>
+				<li><button><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512" fill="currentColor"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button></li>
+			</ul>
+
+			<form></form>
+			<ul>
+				<li><input type="text" placeholder="Zoeken" maxlength="128"></li>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">GROLSCH BIEREN</a></li>
+				<li><a href="#">GROLSCH GLAZEN</a></li>
+				<li><a href="#">BAR ARTIKELEN</a></li>
+				<li><a href="#">GROLSCH KLEDING</a></li>
+				<li><a href="#">GROLSCH GESCHENKEN</a></li>
+				<li><a href="#">MANCAVE</a></li>
+				<li><a href="#">OUTDOOR</a></li>
+				<li><a href="#">NIEUW</a></li>
+				<li><a href="#">SALE</a></li>
+			</ul>
+		</section>
+
+	</footer>
+
+
+</body>
+
+
+
+</html>
